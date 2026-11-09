@@ -1,0 +1,31 @@
+/* AI Effect Video 도움말 */
+:root { --bg:#ffffff; --ink:#1d2330; --muted:#5b6475; --line:#d9dce3; --side:#f4f5f7; --accent:#c2480a; --key:#eef0f4; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg:#16181d; --ink:#d7dbe3; --muted:#8b92a1; --line:#3a3f4b; --side:#1f2229; --accent:#ff9f5a; --key:#2a2e37; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; display: flex; min-height: 100vh; background: var(--bg); color: var(--ink);
+  font: 16px/1.65 "Malgun Gothic", "Segoe UI", sans-serif; }
+nav { flex: 0 0 220px; padding: 20px 12px; background: var(--side); border-right: 1px solid var(--line); }
+nav .brand { font-weight: 700; font-size: 18px; padding: 0 10px 12px; }
+nav a { display: block; padding: 6px 10px; border-radius: 6px; color: var(--ink); text-decoration: none; }
+nav a:hover { background: var(--line); }
+nav a.here { color: var(--accent); font-weight: 700; }
+nav a.lang { margin-top: 16px; color: var(--muted); }
+main { flex: 1; min-width: 0; max-width: 860px; padding: 24px 40px 60px; }
+h1 { font-size: 28px; margin: 0 0 16px; }
+h2 { font-size: 20px; margin: 28px 0 8px; }
+img { max-width: 100%; height: auto; border: 1px solid var(--line); border-radius: 6px; }
+a { color: var(--accent); }
+kbd { padding: 1px 6px; border: 1px solid var(--line); border-radius: 4px; background: var(--key); font: 14px Consolas, monospace; white-space: nowrap; }
+code { font-family: Consolas, monospace; }
+.m { font-weight: 700; white-space: nowrap; }
+table { border-collapse: collapse; width: 100%; }
+th, td { padding: 6px 10px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+dt { font-weight: 700; margin-top: 16px; }
+dd { margin: 4px 0 0; }
+@media (max-width: 700px) {
+  body { display: block; }
+  nav { border-right: 0; border-bottom: 1px solid var(--line); }
+  main { padding: 16px; }
+}

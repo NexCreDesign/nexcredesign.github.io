@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Objects - AI Effect Video</title>
+<link rel="stylesheet" href="../assets/help.css">
+<script src="../assets/help.js" defer></script>
+</head>
+<body data-page="objects">
+<main>
+<h1>Objects</h1>
+<h2>Effect regions (rectangle, polygon, ellipse)</h2>
+<p>These copy the same area of the effect video onto the work video. You can draw them in either viewer.</p>
+<ul>
+<li><kbd>R</kbd> rectangle, <kbd>O</kbd> ellipse: drag to draw.</li>
+<li><kbd>P</kbd> polygon: click to place vertices. Close it by clicking the first vertex, pressing <kbd>Enter</kbd> or right-clicking. <kbd>Backspace</kbd> removes the last vertex and <kbd>Esc</kbd> cancels.</li>
+<li>Shift+drag outside the selected object redefines that region from the current frame.</li>
+</ul>
+<h2>Two positions</h2>
+<p>An effect region has one size and two positions. The work position is where the result goes. The effect position is where it is copied from.</p>
+<ul>
+<li>Dragging moves only that viewer's position. Drag in the work viewer to change where the result goes, and in the effect viewer to change where it is copied from.</li>
+<li>Shift+drag inside the selected object moves both by the same distance. If one side reaches its edge, both stop.</li>
+<li>The size is always the same in both, whichever viewer you resize it in.</li>
+<li>Type values in the "Effect position" X and Y boxes in the object list, or use [Match work position] to use the same coordinates.</li>
+<li>Any part with no effect pixel to copy shows the source.</li>
+</ul>
+<h2>Blue screen</h2>
+<p>Turn on "Blue screen transparent" in the object list to skip the effect's blue background, so the source shows through. It is set per object. Soft edges such as fire or smoke blend naturally with the source. Blue objects are removed too, and purple or magenta can disappear or fade.</p>
+<h2>Text, mosaic and clip art</h2>
+<p>These are created in the work viewer only and do not need an effect video.</p>
+<ul>
+<li><kbd>T</kbd> text: click an empty spot. Change the content, size, color, font and outline color in the object list.</li>
+<li><kbd>M</kbd> mosaic: drag a box to hide the source under blocks.</li>
+<li>Clip art: open the list with the clip art button on the toolbar, pick an image and place it. Pictures copied from PowerPoint and similar apps paste with <kbd>Ctrl+V</kbd>, keeping transparency. <span class="m">Edit › Add Clip Art from Image File…</span> also works.</li>
+</ul>
+<p>Drawing order: mosaic → effect regions → clip art → text → subtitles.</p>
+<h2>Selecting and editing</h2>
+<ul>
+<li>Click an object or pick it in the list. <kbd>Tab</kbd> and <kbd>Shift+Tab</kbd> step through the objects on the current frame.</li>
+<li>Drag inside to move and drag a handle to resize. Polygon vertices can be dragged too.</li>
+<li>You can also type X, Y, W and H values in the list.</li>
+</ul>
+<h2>Range rules</h2>
+<p>Edits apply <b>from the current frame on</b>; earlier frames stay as they are. To change a whole range, go to its start with the ⇤ button in the list, then edit.</p>
+<ul>
+<li>The effect position also follows ranges. Where objects of the same kind overlap, the lower one in the list is drawn on top.</li>
+<li>[End here] or <kbd>Delete</kbd> ends the selected object at the current frame.</li>
+<li><kbd>Shift+Delete</kbd> removes the whole object.</li>
+<li>Right-click an object bar on the timeline to remove a change point.</li>
+<li>The eye button hides an object. Hidden objects are not exported. Drag the handle in the list to change the order.</li>
+<li><kbd>E</kbd> or the On/Off switch only turns compositing off in the preview. It does not change the export.</li>
+<li><kbd>Ctrl+Z</kbd> undoes and <kbd>Ctrl+Y</kbd> redoes.</li>
+</ul>
+</main>
+</body>
+</html>

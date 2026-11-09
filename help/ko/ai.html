@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 연결 - AI Effect Video</title>
+<link rel="stylesheet" href="../assets/help.css">
+<script src="../assets/help.js" defer></script>
+</head>
+<body data-page="ai">
+<main>
+<h1>AI 연결</h1>
+<p>Claude Desktop 같은 AI에게 말로 편집을 맡길 수 있습니다. AI가 바꾼 내용은 그 순간 화면에 보이고, <kbd>Ctrl+Z</kbd>로 되돌릴 수 있습니다.</p>
+<h2>연결하기</h2>
+<ol>
+<li><span class="m">설정 › AI 연결 허용 (MCP)</span>이 켜져 있는지 확인합니다. 기본으로 켜져 있습니다.</li>
+<li>Claude Desktop의 설정 파일 <code>claude_desktop_config.json</code>의 <code>mcpServers</code>에 아래 내용을 넣습니다.</li>
+<li>Claude Desktop을 완전히 닫았다가 다시 엽니다.</li>
+</ol>
+<pre><code>"effectvideo": { "command": "effectvideo-mcp" }</code></pre>
+<p>연결되면 화면 맨 아래에 "AI 연결됨"이 나옵니다. 앱이 꺼져 있으면 AI가 처음 요청할 때 앱이 실행됩니다.</p>
+<h2>이렇게 말해 보세요</h2>
+<ul>
+<li>"이 영상을 원본으로, 이 영상을 이펙트로 열고 이펙트를 12프레임 늦춰 줘"</li>
+<li>"3초부터 5초까지 오른쪽 위에 '안녕'이라고 넣어 줘"</li>
+<li>"지금 화면을 보여 줘"</li>
+<li>"방금 것 취소해 줘"</li>
+<li>"H.265로 내보내 줘"</li>
+</ul>
+<h2>알아 둘 점</h2>
+<ul>
+<li>AI가 한 번에 보낸 변경은 <kbd>Ctrl+Z</kbd> 한 번으로 되돌립니다. 한 번의 부탁을 AI가 여러 번에 나누어 보내면 그만큼 눌러야 합니다. 원본이나 프로젝트를 새로 열거나 이펙트 영상을 열고 닫는 동작은 되돌릴 수 없습니다.</li>
+<li>AI가 저장하지 않은 작업을 버리거나 파일을 덮어쓰려면 따로 허락이 필요합니다.</li>
+<li>사용자가 화면을 끄는 중이면 그 조작이 끝난 뒤에 AI의 요청이 적용됩니다. 내보내는 동안에는 편집 요청을 받지 않습니다.</li>
+<li>AI가 시작한 내보내기는 끝나면 창이 저절로 닫히고, 결과는 AI가 알려 줍니다.</li>
+<li>이 PC 안의 연결만 받습니다. 다만 AI에게 보여 준 화면은 그 AI 서비스로 전송됩니다.</li>
+<li>무료판에서는 AI가 내보낸 영상에도 워터마크가 들어갑니다.</li>
+</ul>
+</main>
+</body>
+</html>

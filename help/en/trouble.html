@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Troubleshooting - AI Effect Video</title>
+<link rel="stylesheet" href="../assets/help.css">
+<script src="../assets/help.js" defer></script>
+</head>
+<body data-page="trouble">
+<main>
+<h1>Troubleshooting</h1>
+<dl>
+<dt>Playback stutters or the picture is corrupted</dt>
+<dd>Try toggling <span class="m">Settings › Hardware Decoding (GPU)</span>. Unsupported videos fall back to the CPU automatically. Updating your graphics driver can also help.</dd>
+<dt>Scrubbing is slow</dt>
+<dd>Videos with long keyframe intervals seek slowly, especially at 4K.</dd>
+<dt>A "variable frame rate" notice appears</dt>
+<dd>This is common with phone and screen recordings. The app uses the average frame rate and shows what was on screen at each frame's time, keeping the sound in sync. Section copying is not used.</dd>
+<dt>A video will not open</dt>
+<dd>Videos larger than 3840×2160 cannot be opened. This applies to effect videos too.</dd>
+<dt>No encoder is available for export</dt>
+<dd>Update your graphics driver, and on Windows N editions install the Media Feature Pack. AV1 and VP9 can also export with CPU encoders.</dd>
+<dt>Export stops with an encoder error</dt>
+<dd>Use [Try Again] on the failure screen to try another encoder. It can fail if another program is using your graphics card's encoder.</dd>
+<dt>There is no sound</dt>
+<dd>Check the default output device in Windows, the source audio speaker button and the mute button on the transport bar.</dd>
+<dt>The program crashed</dt>
+<dd>The next start lists your temporary backups. Choose one to restore, or delete the ones you do not need. Backups older than 7 days are deleted automatically. When contacting support, send the file from <span class="m">Help › Save Log…</span>. Crash records are in <span class="m">Help › Open Log Folder</span>. Logs stay on your PC.</dd>
+</dl>
+<h2>Contact</h2>
+<p>Use <span class="m">Help › Contact Support</span> to send an email. The address is nexcredesign@protonmail.com, and it also appears in <span class="m">Help › About AI Effect Video…</span>. When reporting a problem, please attach the log.</p>
+</main>
+</body>
+</html>

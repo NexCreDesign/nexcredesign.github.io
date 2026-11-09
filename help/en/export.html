@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trimming and Export - AI Effect Video</title>
+<link rel="stylesheet" href="../assets/help.css">
+<script src="../assets/help.js" defer></script>
+</head>
+<body data-page="export">
+<main>
+<h1>Trimming and Export</h1>
+<h2>Trimming the ends</h2>
+<p>Drag the edges of the timeline or the handles on a source track, or enter numbers in [⋯] on its name. Dragging the timeline edges cuts the head of the first source and the tail of the last source, and these two sources always keep at least 1 second. What you cut from the head of the first source and the tail of the last source is left out of the export, and all tracks show it hatched. ✂ Cut above the timeline shows the resulting first and last frames.</p>
+<h2>Joining sources</h2>
+<p>Use <span class="m">File › Append Source Video…</span> or [＋ Add source video] on the timeline to add any number of videos after the last one. A video with a different size from the first source cannot be added. If the frame rate differs, the nearest frame is used for each frame.</p>
+<p>Each source gets its own track. Drag the handles, or enter numbers in [⋯] on its name, to cut the head and tail. The cut parts stay hatched, and when you release, the next video moves up to the new end. Objects move with the video. Cutting the head of the first source or the tail of the last source moves no video. Effect videos and effect audio stay in sync with the start of the source they sit on, so they move when an edge between sources is cut. There is one subtitle, timed from the start of the first source, and it does not move. The first source cannot be removed.</p>
+<h2>Source order and fades</h2>
+<p>Use [Move Earlier] and [Move Later] in [⋯] on a source's name to change the order from the second source on. The first source cannot be moved, and nothing can move before it. Objects follow their video, and effect videos and effect audio move with it. If you move the last source, parts of objects on its cut-off tail are lost.</p>
+<p>A source cannot be inserted in the middle. A new source always goes last, so add it and then change the order.</p>
+<p>Right-click a source bar to add or remove a fade in or fade out. A new fade starts at 1 second; drag its yellow line to change the length (numbers in [⋯] work too). Fades take the ends of the kept part from and to black. The source sound fades too. Objects and effects darken with it, and subtitles stay visible. A source with a fade shows a triangle icon on its bar.</p>
+<p>Subtitles are timed from the start of the first source and also appear over the other sources.</p>
+<h2>Export</h2>
+<p>Open <span class="m">File › Export…</span> (<kbd>Ctrl+E</kbd>). The default output is an MP4 named after the source with <code>_ev</code> added.</p>
+<ul>
+<li><b>Presets</b>: Standard, High Quality, Small File and Fast pick the codec, quality and speed together.</li>
+<li><b>Codec</b>: H.264, H.265, AV1 or VP9. The default is the same as the source.</li>
+<li><b>Encoder</b>: Auto tries your graphics card's encoder first.</li>
+<li><b>Copy unchanged parts from the source</b>: only sections with objects are re-encoded, which is fast and loses no quality. It works only with the source's codec, and is not used if you trimmed the ends or changed the audio. The finish screen tells you why it was not used.</li>
+<li><b>10-bit sources</b>: stay 10-bit with H.265, AV1 and VP9 encoders that support it. H.264 is 8-bit.</li>
+</ul>
+<p>Object borders and the On/Off switch do not affect the result. If you cancel, no partial file is left behind.</p>
+</main>
+</body>
+</html>

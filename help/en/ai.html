@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Connection - AI Effect Video</title>
+<link rel="stylesheet" href="../assets/help.css">
+<script src="../assets/help.js" defer></script>
+</head>
+<body data-page="ai">
+<main>
+<h1>AI Connection</h1>
+<p>You can ask an AI such as Claude Desktop to edit for you. Its changes appear on screen at once, and <kbd>Ctrl+Z</kbd> undoes them.</p>
+<h2>Connecting</h2>
+<ol>
+<li>Check that <span class="m">Settings › Allow AI connection (MCP)</span> is on. It is on by default.</li>
+<li>Add the line below to <code>mcpServers</code> in Claude Desktop's <code>claude_desktop_config.json</code>.</li>
+<li>Quit Claude Desktop completely and open it again.</li>
+</ol>
+<pre><code>"effectvideo": { "command": "effectvideo-mcp" }</code></pre>
+<p>When connected, "AI connected" appears at the bottom of the window. If the app is closed, it starts on the AI's first request.</p>
+<h2>Things to try</h2>
+<ul>
+<li>"Open this video as the source and this one as an effect, then delay the effect by 12 frames"</li>
+<li>"Put 'Hello' in the top right from 3 to 5 seconds"</li>
+<li>"Show me the current frame"</li>
+<li>"Undo that"</li>
+<li>"Export as H.265"</li>
+</ul>
+<h2>Good to know</h2>
+<ul>
+<li>One <kbd>Ctrl+Z</kbd> undoes one batch of changes sent by the AI. If the AI splits your request into several batches, press it that many times. Opening a source or project, and opening or closing an effect video, cannot be undone.</li>
+<li>The AI needs your permission to drop unsaved work or overwrite a file.</li>
+<li>While you are dragging on screen, the AI's request waits until you finish. Edit requests are refused during an export.</li>
+<li>An export started by the AI closes its window when done, and the AI tells you the result.</li>
+<li>Only connections from this PC are accepted. Frames you show the AI are sent to that AI service.</li>
+<li>In the free edition, videos exported by the AI also carry the watermark.</li>
+</ul>
+</main>
+</body>
+</html>

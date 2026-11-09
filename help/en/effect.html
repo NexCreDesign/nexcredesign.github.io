@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Effect Video and Sync - AI Effect Video</title>
+<link rel="stylesheet" href="../assets/help.css">
+<script src="../assets/help.js" defer></script>
+</head>
+<body data-page="effect">
+<main>
+<h1>Effect Video and Sync</h1>
+<h2>Effect video requirements</h2>
+<ul>
+<li>The resolution may differ from the source. The effect video is used without resizing, and you work in source coordinates. Any part of an object outside the effect shows the source.</li>
+<li>The frame rate may differ. The app tells you and uses the effect frame closest in time to each frame.</li>
+</ul>
+<h2>Several effect videos</h2>
+<p>You can open as many effect videos as you like, with the button at the bottom of the timeline or <span class="m">File › Open Effect Video…</span>.</p>
+<ul>
+<li>Each object uses one effect. A new object uses the effect shown in the effect viewer. Change it in the "Effect" box in the object list.</li>
+<li>There is one effect viewer. Switch it with the box above it or by clicking a track name on the timeline. Selecting an object switches to that object's effect.</li>
+<li>Each effect has its own offset, and the offset controls apply to the shown effect.</li>
+<li>Close an effect from the track's [⋯] menu. Objects that use it stay, and show the source until you pick another effect.</li>
+</ul>
+<h2>Cutting an effect video</h2>
+<p>This works like effect audio. Right-click the track to cut, drag a section to move it, and drag its edge to change its length. Objects using that effect show the source where it is cut.</p>
+<h2>Effect position of an object</h2>
+<p>The effect video does not move. Instead, each object can copy from its own effect position. See <a href="objects.html">Objects</a>.</p>
+<h2>Offset</h2>
+<p>The offset is the work frame where frame 0 of the effect video sits.</p>
+<ul>
+<li><kbd>[</kbd> and <kbd>]</kbd> change it one frame at a time.</li>
+<li>Type a number in the offset box on the effect viewer toolbar, or use the − and + buttons.</li>
+<li>You can also drag the effect video track on the timeline.</li>
+</ul>
+<p><code>FX #number</code> above the effect viewer is the frame number in the effect video. If there is no matching frame, the viewer shows that it is out of range and regions there export as the plain source.</p>
+</main>
+</body>
+</html>
