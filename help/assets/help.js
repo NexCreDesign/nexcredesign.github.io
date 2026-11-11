@@ -1,3 +1,10 @@
+// 탭 아이콘(파비콘)
+const icon = document.createElement("link");
+icon.rel = "icon";
+icon.type = "image/png";
+icon.href = new URL("ncd_logo.png", document.currentScript.src).href;
+document.head.appendChild(icon);
+
 // 도움말 왼쪽 목록과 언어 전환. 쪽을 추가하면 PAGES에 넣는다 (docs/manual/README.md).
 const PAGES = [
   ["index", "시작하기", "Getting Started"],
@@ -14,10 +21,26 @@ const PAGES = [
 const lang = document.documentElement.lang;
 const current = document.body.dataset.page;
 const nav = document.createElement("nav");
+
+// Logo 영역
+const logoLink = document.createElement("a");
+logoLink.className = "logo";
+logoLink.href = new URL("../../index.html", document.currentScript.src).href;  // 클릭하면 홈으로
+const logo = document.createElement("img");
+logo.src = new URL("ncd_logo.png", document.currentScript.src).href;
+logo.alt = "NexCreDesign logo";
+logoLink.appendChild(logo);
+nav.appendChild(logoLink);
+const company = document.createElement("span");
+company.className = "company";
+company.textContent = "NexCreDesign";
+logoLink.appendChild(company);
+
 const title = document.createElement("div");
 title.className = "brand";
 title.textContent = "AI Effect Video";
 nav.appendChild(title);
+
 for (const [page, ko, en] of PAGES) {
   const link = document.createElement("a");
   link.href = page + ".html";

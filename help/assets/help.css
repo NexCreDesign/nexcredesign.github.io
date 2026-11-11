@@ -5,13 +5,20 @@
 }
 * { box-sizing: border-box; }
 body { margin: 0; display: flex; min-height: 100vh; background: var(--bg); color: var(--ink);
-  font: 16px/1.65 "Malgun Gothic", "Segoe UI", sans-serif; }
+  font: 16px/1.65 "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; 
+}
 nav { flex: 0 0 220px; padding: 20px 12px; background: var(--side); border-right: 1px solid var(--line); }
 nav .brand { font-weight: 700; font-size: 18px; padding: 0 10px 12px; }
 nav a { display: block; padding: 6px 10px; border-radius: 6px; color: var(--ink); text-decoration: none; }
 nav a:hover { background: var(--line); }
 nav a.here { color: var(--accent); font-weight: 700; }
 nav a.lang { margin-top: 16px; color: var(--muted); }
+/** Logo section **/
+nav .logo { display: flex; align-items: center; gap: 8px; padding: 0 10px 28px; border-radius: 0; text-decoration: none; }
+nav .logo:hover { background: none; }
+nav .logo img { display: block; height: 32px; width: auto; border: 0; border-radius: 0; }
+nav .logo .company { font-weight: 700; font-size: 16px; color: #602E96; white-space: nowrap; font-weight: bold;}
+
 main { flex: 1; min-width: 0; max-width: 860px; padding: 24px 40px 60px; }
 h1 { font-size: 28px; margin: 0 0 16px; }
 h2 { font-size: 20px; margin: 28px 0 8px; }
@@ -24,6 +31,18 @@ table { border-collapse: collapse; width: 100%; }
 th, td { padding: 6px 10px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
 dt { font-weight: 700; margin-top: 16px; }
 dd { margin: 4px 0 0; }
+/** FAQ **/
+.faq details { border-bottom: 1px solid var(--line); }
+.faq details:first-child { border-top: 1px solid var(--line); }
+.faq summary { display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  padding: 12px 12px; font-weight: 700; cursor: pointer; list-style: none;}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; flex: none; font-size: 20px; line-height: 1; color: var(--muted); }
+.faq details[open] summary::after { content: "−"; }
+.faq summary:hover { color: var(--accent); }
+.faq details p { margin: 0 12px 12px; word-break: keep-all; overflow-wrap: break-word;}
+
+
 @media (max-width: 700px) {
   body { display: block; }
   nav { border-right: 0; border-bottom: 1px solid var(--line); }
